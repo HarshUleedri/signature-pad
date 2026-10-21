@@ -1,5 +1,14 @@
+import SignaturePad from "./components/SignaturePad";
+
 const App = () => {
-  return <div className="text-6xl">App</div>;
+  const handleSave = (signature: string) => {
+    console.log("Signature saved:", signature);
+  };
+  return (
+    <div className="h-screen w-full flex items-center justify-center ">
+      <SignaturePad onSave={handleSave} />
+    </div>
+  );
 };
 
 export default App;
